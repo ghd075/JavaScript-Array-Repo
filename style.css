@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+h3 {
+  text-align: left;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+pre {
+  background: #2d2d2d;
+  color: #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+#go-top {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 9999;
+  color: #3F51B5; /* 색상변경*/
+}

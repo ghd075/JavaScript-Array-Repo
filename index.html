@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/line-numbers/prism-line-numbers.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>배열함수 문제</h1>
+    <h3>모든 문제에는 다음 배열이 쓰입니다.</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+    </code></pre>
+
+    <h2>map 문제</h2>
+    <h3>1. 모든 이름을 대문자로 바꾸어서 출력하시오.</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer1">정답보기</button>
+      <button id="run-code1" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block1"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const upperCaseNames = names.map(name => name.toUpperCase());
+console.log(upperCaseNames);
+    </code></pre>
+    <div id="output1" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output1"></pre>
+    </div>
+
+    <h3>2. 성을 제외한 이름만 출력하시오.</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer2">정답보기</button>
+      <button id="run-code2" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block2"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const firstNames = names.map(name => name.split(' ').slice(0, -1).join(' '));
+console.log(firstNames);
+    </code></pre>
+    <div id="output2" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output2"></pre>
+    </div>
+
+    <h3>3. 이름의 이니셜만 출력하시오.</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer3">정답보기</button>
+      <button id="run-code3" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block3"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const initials = names.map(name => name.split(' ').map(n => n[0]).join(''));
+console.log(initials);
+    </code></pre>
+    <div id="output3" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output3"></pre>
+    </div>
+
+    <h2>filter 문제</h2>
+    <h3>4. 이름에 a를 포함한 사람들을 출력하시오.</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer4">정답보기</button>
+      <button id="run-code4" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block4"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const namesWithA = names.filter(name => name.toLowerCase().includes('a'));
+console.log(namesWithA);
+    </code></pre>
+    <div id="output4" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output4"></pre>
+    </div>
+
+    <h3>5. 이름에 같은 글자가 연속해서 들어간 사람을 출력하시오.</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer5">정답보기</button>
+      <button id="run-code5" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block5"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const repeatedLetters = names.filter(name => /(.)\1/.test(name));
+console.log(repeatedLetters);
+    </code></pre>
+    <div id="output5" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output5"></pre>
+    </div>
+
+    <!-- some 문제들 -->
+    <h2>some 문제</h2>
+    <h3>6. 전체 이름의 길이가 20자 이상인 사람이 있는가?</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer6">정답보기</button>
+      <button id="run-code6" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block6"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const isLongName = names.some(name => name.length >= 20);
+console.log(isLongName);
+    </code></pre>
+    <div id="output6" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output6"></pre>
+    </div>
+
+    <h3>7. 성을 제외한 이름에 p를 포함한 사람이 있는가?(대소문자 상관 no)</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer7">정답보기</button>
+      <button id="run-code7" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block7"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const hasP = names.some(name => name.split(' ').slice(0, -1).join(' ').toLowerCase().includes('p'));
+console.log(hasP);
+    </code></pre>
+    <div id="output7" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output7"></pre>
+    </div>
+
+    <h2>every 문제</h2>
+    <h3>8. 모두의 전체 이름의 길이가 20자 이상인가?</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer8">정답보기</button>
+      <button id="run-code8" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block8"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const allLongNames = names.every(name => name.length >= 20);
+console.log(allLongNames);
+    </code></pre>
+    <div id="output8" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output8"></pre>
+    </div>
+
+    <h3>9. 모두의 이름에 a 가 포함되어 있는가?</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer9">정답보기</button>
+      <button id="run-code9" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block9"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const allHaveA = names.every(name => name.toLowerCase().includes('a'));
+console.log(allHaveA);
+    </code></pre>
+    <div id="output9" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output9"></pre>
+    </div>
+
+    <h2>find 문제</h2>
+    <h3>10. 전체 이름의 길이가 20자 이상인 사람을 찾으시오.</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer10">정답보기</button>
+      <button id="run-code10" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block10"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const longNamePerson = names.find(name => name.length >= 20);
+console.log(longNamePerson);
+    </code></pre>
+    <div id="output10" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output10"></pre>
+    </div>
+
+    <h3>11. 미들네임이 포함되어있는 사람을 찾으시오.(예-Steven Paul Jobs)</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer11">정답보기</button>
+      <button id="run-code11" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block11"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const hasMiddleName = names.find(name => name.split(' ').length > 2);
+console.log(hasMiddleName);
+    </code></pre>
+    <div id="output11" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output11"></pre>
+    </div>
+
+    <h2>findIndex 문제</h2>
+    <h3>12. 전체 이름의 길이가 20자 이상인 사람의 인덱스 번호를 찾으시오.</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer12">정답보기</button>
+      <button id="run-code12" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block12"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const longNameIndex = names.findIndex(name => name.length >= 20);
+console.log(longNameIndex);
+    </code></pre>
+    <div id="output12" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output12"></pre>
+    </div>
+
+    <h3>13. 미들네임이 포함되어있는 사람의 인덱스 번호를 찾으시오.</h3>
+    <pre class="line-numbers"><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+// 정답 코드를 작성하세요.
+    </code></pre>
+    <div class="button-container">
+      <button id="show-answer13">정답보기</button>
+      <button id="run-code13" style="display: none">정답 코드 실행하기</button>
+    </div>
+    <pre
+      id="code-block13"
+      class="line-numbers"
+      style="display: none"
+    ><code class="language-javascript">
+let names = [
+  "Steven Paul Jobs",
+  "Bill Gates",
+  "Mark Elliot Zuckerberg",
+  "Elon Musk",
+  "Jeff Bezos",
+  "Warren Edward Buffett",
+  "Larry Page",
+  "Larry Ellison",
+  "Tim Cook",
+  "Lloyd Blankfein",
+];
+const middleNameIndex = names.findIndex(name => name.split(' ').length > 2);
+console.log(middleNameIndex);
+    </code></pre>
+    <div id="output13" style="display: none">
+      <h2>코드 실행 결과</h2>
+      <pre id="code-output13"></pre>
+    </div>
+
+    <button id="go-top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="38"
+        height="38"
+        fill="currentColor"
+        class="bi bi-arrow-up-circle-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+        />
+      </svg>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
